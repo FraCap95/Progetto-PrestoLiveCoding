@@ -1,0 +1,121 @@
+[{
+    "id": 1,
+    "nome": "Nintendo Wii",
+    "prezzo": 20,
+    "categoria": "Console",
+    "anno": 2007
+  }, {
+    "id": 2,
+    "nome": "Mario Kart Deluxe 8",
+    "prezzo": 15,
+    "categoria": "Videogame",
+    "anno": 2014
+  }, {
+    "id": 3,
+    "nome": "Pokémon Rosso",
+    "prezzo": 50,
+    "categoria": "Videogame",
+    "anno": 1996
+  }, {
+    "id": 4,
+    "nome": "Play Station 5 - Digital",
+    "prezzo": 300,
+    "categoria": "Console",
+    "anno": 2023
+  }, {
+    "id": 5,
+    "nome": "Game Boy Color",
+    "prezzo": 150,
+    "categoria": "Console",
+    "anno": 1999
+  }, {
+    "id": 6,
+    "nome": "Milk - 2% 250 Ml",
+    "prezzo": 1839,
+    "categoria": "Scheda Video",
+    "anno": 1978
+  }, {
+    "id": 7,
+    "nome": "Pork - Tenderloin, Frozen",
+    "prezzo": 944,
+    "categoria": "Periferiche PC",
+    "anno": 1986
+  }, {
+    "id": 8,
+    "nome": "Bread - Multigrain, Loaf",
+    "prezzo": 380,
+    "categoria": "Scheda Video",
+    "anno": 2000
+  }, {
+    "id": 9,
+    "nome": "Noodles - Cellophane, Thin",
+    "prezzo": 1864,
+    "categoria": "PC Case",
+    "anno": 2019
+  }, {
+    "id": 10,
+    "nome": "Beef - Ground Lean Fresh",
+    "prezzo": 1358,
+    "categoria": "Scheda Video",
+    "anno": 1991
+  }, {
+    "id": 11,
+    "nome": "Rhubarb",
+    "prezzo": 1801,
+    "categoria": "Componenti PC",
+    "anno": 1989
+  }, {
+    "id": 12,
+    "nome": "Appetizer - Smoked Salmon / Dill",
+    "prezzo": 145,
+    "categoria": "Accessori",
+    "anno": 2014
+  }, {
+    "id": 13,
+    "nome": "Kellogs Special K Cereal",
+    "prezzo": 1683,
+    "categoria": "Controller",
+    "anno": 1995
+  }, {
+    "id": 14,
+    "nome": "Beef - Diced",
+    "prezzo": 1771,
+    "categoria": "Accessori",
+    "anno": 1987
+  }, {
+    "id": 15,
+    "nome": "Cinnamon - Ground",
+    "prezzo": 880,
+    "categoria": "Cabinati",
+    "anno": 1972
+  }, {
+    "id": 16,
+    "nome": "Island Oasis - Strawberry",
+    "prezzo": 1087,
+    "categoria": "Cabinati",
+    "anno": 2018
+  }, {
+    "id": 17,
+    "nome": "Beans - Wax",
+    "prezzo": 865,
+    "categoria": "Controller",
+    "anno": 1975
+  }, {
+    "id": 18,
+    "nome": "Soda Water - Club Soda, 355 Ml",
+    "prezzo": 600,
+    "categoria": "Accessori",
+    "anno": 1995
+  }, {
+    "id": 19,
+    "nome": "Campari",
+    "prezzo": 1868,
+    "categoria": "Cavi e alimentazione",
+    "anno": 2008
+  }, {
+    "id": 20,
+    "nome": "Filter - Coffee",
+    "prezzo": 157,
+    "categoria": "Accessori",
+    "anno": 2000
+  }]

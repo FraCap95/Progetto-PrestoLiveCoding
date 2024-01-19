@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Presto.it</title>
+<!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<!-- SWIPER CSS  -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+<!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<!-- Icone fontAwesome -->
+<script src="https://kit.fontawesome.com/4deabac0c4.js" crossorigin="anonymous"></script>
+<!-- Icone BootStrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<!-- CSS BootStrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<!-- CSS Mio -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="backgroundBody">
+<!-- INIZIO NAVBAR -->
+<nav id="navbar" class="navbar navbarCust navbar-expand-lg fixed-top transition mt-2" data-bs-theme="dark">
+    <div class="container-fluid">
+      <i class="fa-solid fa-dragon fa-bounce fa-2xl me-4" style="color: #fb00b8;"></i>
+      <a class="navbar-brand fontTitle color-A m" href="./index.html">Presto.it</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link color-A" aria-current="page" href="./annunci.html">Annunci</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link color-A" href="#">Contatti</a>
+          </li>
+          <li class="nav-item dropdown ">
+            <a class="nav-link dropdown-toggle color-A" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categorie
+            </a>
+            <ul class="dropdown-menu bg-black">
+              <li><a class="dropdown-item color-A" href="#">Action</a></li>
+              <li><a class="dropdown-item color-A" href="#">Another action</a></li>
+              <li><a class="dropdown-item color-A" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Cerca" aria-label="Search">
+          <button class="btn fucsia" type="submit">Cerca</button>
+        </form>
+        <ul class="navbar-nav ms-5">
+            <li class="nav-item">
+                <a class="nav-link py-0 me-3" href="#"><i class="bi bi-person color-A fs-4"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link py-0" href="#"><i class="bi bi-cart4 color-A fs-4"></i></a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!-- FINE NAVBAR -->
+
+<!-- SEZIONE FILTRI  -->
+<section class="container mt-5 pt-5">
+  <div class="row mb-5">
+    <div class="col-12">
+      <h2 class="text-center fontTitle display-6 color-A border-bottom border-black">ANNUNCI</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 col-md-3">
+      <div class="filtersMenu pe-md-5">
+          <!-- FILTRO PER CATEGORIA  -->
+
+
+          <div class="d-flex align-items-center">          
+            <h3 class="color-A border-bottom border-dark">Filtro per categoria</h3>
+            <i class="fa-solid fa-chevron-down" id="buttonMenu"></i>
+        </div>
+          <div id="menuCat" class="d-none">
+            <div id="categoryButtons">
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="All" checked>
+                  <label class="form-check-label color-A" for="All">
+                      Tutte le categorie
+                  </label>
+              </div>
+          </div>
+          </div>
+
+
+          <!-- FILTRO PER PREZZO  -->
+          <h3 class="color-A mt-4 border-bottom border-dark">Filtro per prezzo</h3>
+          <label id="price" for="inputPrice" class="form-label color-A"><span class="fw-bold fs-5 color-A">€</span><span id="price"></span></label>
+          <input type="range" class="form-range custom-range" id="inputPrice" value="" max="" min="">
+          <!-- FILTRO PER PAROLA  -->
+          <h3 class="color-A my-4 border-bottom border-dark">Filtro per parola</h3>
+          <input id="wordInput" class="form-control me-2" type="search" placeholder="Ricerca" aria-label="Ricerca">
+      </div>
+    </div>
+    <div class="col-12 col-md-8 ms-5">
+      <div class="container-fluid">
+          <div class="row"></div>
+  </div>
+      
+<!-- FINE SEZIONE FILTRI  -->
+              
+<!-- CARDS  -->
+  <div class="row" id="cardsWrapper"></div>
+</section>
+
+
+
+<!-- INIZIO FOOTER -->
+<div class="container-fluid color-A bg-black border-top border-dark">
+  <footer class="py-5">
+    <div class="row mx-5">
+      <div class="col-6 col-md-2 mb-3">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 color-A">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 color-A">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 color-A">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 color-A">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 color-A">About</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-2 mb-3">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 color-A">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 color-A">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 color-A">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 color-A">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 color-A">About</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-2 mb-3">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 color-A">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 color-A">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 color-A">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 color-A">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 color-A">About</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-5 offset-md-1 mb-3">
+        <form>
+          <h5 class="mb-1">Iscriviti alla nostra newsletter</h5>
+          <p class="mb-3">Resta sempre aggiornato sulle ultime inserzioni.</p>
+          <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+            <label for="newsletter1" class="visually-hidden">Indirizzo Email</label>
+            <input id="newsletter1" type="text" class="form-control" placeholder="Indirizzo Email">
+            <button class="btn fucsia" type="button">Iscriviti</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-12 d-flex justify-content-between">
+            <span class="color-A" style="text-decoration: none;"><i class="fa-solid fa-dragon fa-xl me-3" style="color: #fb00b8;"></i>© 2022 Company, Inc. All rights reserved.</span>
+          <ul class="list-unstyled d-flex me-5">
+            <li class="ms-3"><a class="color-A" href="#"><i class="bi bi-facebook"></i></a></li>
+            <li class="ms-3"><a class="color-A" href="#"><i class="bi bi-twitter"></i></a></li>
+            <li class="ms-3"><a class="color-A" href="#"><i class="bi bi-instagram"></i></a></li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+  </footer>
+</div>
+<!-- FINE FOOTER -->
+
+
+
+
+
+<!-- Swiper JS  -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<!-- AoS JS  -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<!-- JS BootStrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<!-- JS Mio -->
+<script src="./annunci.js"></script>
+</body>
+</html>

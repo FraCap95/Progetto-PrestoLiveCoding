@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Presto.it</title>
+<!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<!-- SWIPER CSS  -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+<!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<!-- Icone fontAwesome -->
+<script src="https://kit.fontawesome.com/4deabac0c4.js" crossorigin="anonymous"></script>
+<!-- Icone BootStrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<!-- CSS BootStrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<!-- CSS Mio -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="backgroundBody">
+<!-- INIZIO NAVBAR -->
+<nav id="navbar" class="navbar navbarCust navbar-expand-lg fixed-top transition mt-2" data-bs-theme="dark">
+    <div class="container-fluid">
+      <i class="fa-solid fa-dragon fa-bounce fa-2xl me-4" style="color: #fb00b8;"></i>
+      <a class="navbar-brand fontTitle color-A m" href="./index.html">Presto.it</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link color-A" aria-current="page" href="./annunci.html">Annunci</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link color-A" href="#">Contatti</a>
+          </li>
+          <li class="nav-item dropdown ">
+            <a class="nav-link dropdown-toggle color-A" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categorie
+            </a>
+            <ul class="dropdown-menu bg-black">
+              <li><a class="dropdown-item color-A" href="#">Action</a></li>
+              <li><a class="dropdown-item color-A" href="#">Another action</a></li>
+              <li><a class="dropdown-item color-A" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Cerca" aria-label="Search">
+          <button class="btn fucsia" type="submit">Cerca</button>
+        </form>
+        <ul class="navbar-nav ms-5">
+            <li class="nav-item">
+                <a class="nav-link py-0 me-3" href="#"><i class="bi bi-person color-A fs-4"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link py-0" href="#"><i class="bi bi-cart4 color-A fs-4"></i></a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!-- FINE NAVBAR -->
+
+<!-- INIZIO HEADER -->
+<header class="masthead container-fluid backgroundHeader">
+    <div class="row h-100 justify-content-evenly">
+        <!-- titolo principale  -->
+        <div class="col-12 col-md-4 h-100 d-flex flex-column justify-content-center align-items-center p-5">
+            <h1 class="color-A fontTitle text-center">Esplora un Universo di Videogiochi!</h1>
+            <p class="color-A text-center">Scopri l'emozione dei videogiochi usati nel nostro sito e-commerce! Offriamo una selezione di titoli d'epoca e moderni, accuratamente testati per garantire la qualità. Trova i tuoi giochi preferiti a prezzi convenienti e immergiti nell'esperienza di gioco retro e contemporanea.</p>
+            <div class="mt-5">
+                <button class="button1 me-5">COMPRA ORA</button>
+                <button class="button1 ms-5">ESPLORA</button>
+            </div>
+        </div>
+        <!-- Immagine header  -->
+        <div class="col-12 col-md-4 d-none d-md-flex h-100 flex-column justify-content-center align-items-center p-5">
+            <img class="imgHead w-100 h-70" src="https://picsum.photos/200" alt="">
+        </div>
+    </div>
+</header>
+<!-- FINE HEADER -->
+
+<!-- BOTTOM HEADER -->
+<section class="sezioneFrase container-fluid backgroundBlack">
+  <div class="row h-100">
+    <div class="col-12 px-5 d-flex align-items-center justify-content-center h-100">
+        <h2 class="color-A">Esplora il passato, gioca al presente: il tuo paradiso dei videogiochi vintage inizia qui!</h2>
+    </div>
+  </div>
+</section>
+<!-- FINE BOTTOM HEADER -->
+
+<!-- SEZIONE CARDS -->
+<section class="container">
+  <div class="row">
+      <div class="col-12 my-5">
+          <h2 class="color-A fontTitle display-1 text-center border-bottom border-black">ULTIMI ANNUNCI</h2>
+      </div>
+  </div>
+  <div id="annunciWrapper" class="row justify-content-evenly">
+  </div>
+</section>
+<!-- FINE SEZIONE CARDS -->
+
+<!-- SEZIONE CATEGORIE -->
+<section class="container-fluid">
+  <div class="row my-5">
+    <div class="col-12">
+        <h2 class="color-A fontTitle display-1 text-center border-bottom border-black mx-5">CATEGORIE</h2>
+    </div>
+  </div>
+  <div class="row justify-content-evenly">
+    <div class="col-6 col-md-3 mx-2 my-5">
+        <img class="img-category" src="https://picsum.photos/200" alt="" data-aos="fade-right" >
+    </div>
+    <div class="col-6 col-md-3 mx-2 my-5">
+        <img class="img-category" src="https://picsum.photos/201" alt="" data-aos="fade-down" data-aos-delay="100">
+    </div>
+    <div class="col-6 col-md-3 mx-2 my-5">
+        <img class="img-category" src="https://picsum.photos/202" alt="" data-aos="fade-left" data-aos-delay="200">
+    </div>
+    <div class="col-6 col-md-3 mx-2 my-5">
+        <img class="img-category" src="https://picsum.photos/203" alt="" data-aos="fade-right" data-aos-delay="300">
+    </div>
+    <div class="col-6 col-md-3 mx-2 my-5">
+        <img class="img-category" src="https://picsum.photos/204" alt="" data-aos="fade-up" data-aos-delay="400">
+    </div>
+    <div class="col-6 col-md-3 mx-2 my-5">
+        <img class="img-category" src="https://picsum.photos/205" alt="" data-aos="fade-left" data-aos-delay="500">
+    </div>
+  </div>
+</section>
+<!-- FINE SEZIONE CATEGORIE -->
+
+<!-- INIZIO COUNTER -->
+<section class="container-fluid py-5 bg-black">
+  <div class="row justify-content-evenly">
+    <div class="col-12 col-md-3 boxNumbers">
+        <h3>Articoli:</h3>
+        <p><span id="articlesNumber" class="fs-3">0</span>+</p>
+    </div>
+    <div class="col-12 col-md-3 boxNumbers">
+        <h3>Utenti:</h3>
+        <p><span id="usersNumber" class="fs-3">0</span>+</p>
+    </div>
+    <div class="col-12 col-md-3 boxNumbers">
+        <h3>Prodotti Totali:</h3>
+        <p><span id="productsNumber" class="fs-3">0</span>+</p>
+    </div>
+  </div>
+</section>
+<!-- FINE COUNTER -->
+
+<!-- SEZIONE RECENSIONI -->
+<section class="container my-5">
+  <div class="row">
+      <div class="col-12">
+          <h2 class="color-A fontTitle display-3 text-center border-bottom border-black my-5">RECENSIONI</h2>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-12">
+        <div class="swiper mySwiper text-black">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide d-flex flex-column justify-content-around align-items-center shadow">
+              <h5>GamerCrazy99</h5>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, doloribus. Facilis maxime repudiandae quia ipsum.</p>
+              <img class="img-carousel" src="https://picsum.photos/50" alt="">
+              <div class="fs-4">
+                  <i class="bi bi-star-fill text-black"></i>
+                  <i class="bi bi-star-fill text-black"></i>
+                  <i class="bi bi-star-fill text-black"></i>
+                  <i class="bi bi-star-half text-black"></i>
+                  <i class="bi bi-star text-black"></i>
+              </div>
+          </div>
+          <div class="swiper-slide d-flex flex-column justify-content-around align-items-center shadow">
+              <h5 class="color-p">Darth Vader</h5>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, doloribus. Facilis maxime repudiandae quia ipsum.</p>
+              <img class="img-carousel" src="https://picsum.photos/51" alt="">
+              <div class="fs-4">
+                  <i class="bi bi-star-fill text-black"></i><i class="bi bi-star-fill text-black"></i><i class="bi bi-star-half text-black"></i><i class="bi bi-star text-black"></i><i class="bi bi-star text-black"></i>
+              </div>
+          </div>
+          <div class="swiper-slide d-flex flex-column justify-content-around align-items-center shadow">
+              <h5 class="color-p">Emperor Palpatine</h5>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, doloribus. Facilis maxime repudiandae quia ipsum.</p>
+              <img class="img-carousel" src="https://picsum.photos/52" alt="">
+              <div class="fs-4">
+                  <i class="bi bi-star-fill text-black"></i>
+                  <i class="bi bi-star-half text-black"></i>
+                  <i class="bi bi-star text-black"></i>
+                  <i class="bi bi-star text-black"></i>
+                  <i class="bi bi-star text-black"></i>
+              </div>
+          </div>
+          <div class="swiper-slide d-flex flex-column justify-content-around align-items-center shadow">
+            <h5 class="color-p">C-3PO</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, doloribus. Facilis maxime repudiandae quia ipsum.</p>
+            <img class="img-carousel" src="https://picsum.photos/53" alt="">
+            <div class="fs-4">
+                <i class="bi bi-star-fill text-black"></i>
+                <i class="bi bi-star-fill text-black"></i>
+                <i class="bi bi-star-fill text-black"></i>
+                <i class="bi bi-star-fill text-black"></i>
+                <i class="bi bi-star-fill text-black"></i>
+            </div>
+        </div>
+        <div class="swiper-slide d-flex flex-column justify-content-around align-items-center shadow">
+            <h5 class="color-p">R2-D2</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, doloribus. Facilis maxime repudiandae quia ipsum.</p>
+            <img class="img-carousel" src="https://picsum.photos/54" alt="">
+            <div class="fs-4">
+                <i class="bi bi-star-fill text-black"></i>
+                <i class="bi bi-star-fill text-black"></i>
+                <i class="bi bi-star-fill text-black"></i>
+                <i class="bi bi-star-fill text-black"></i>
+                <i class="bi bi-star-half text-black"></i>
+            </div>
+        </div>
+      </div>
+        <div class="swiper-button-prev color-A"></div>
+        <div class="swiper-button-next color-A"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINE RECENSIONI -->
+
+<!-- FOOTER -->
+<div class="container-fluid color-A bg-black border-top border-dark">
+  <footer class="py-5">
+    <div class="row mx-5">
+      <div class="col-6 col-md-2 mb-3">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 color-A">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 color-A">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 color-A">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 color-A">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 color-A">About</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-2 mb-3">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 color-A">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 color-A">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 color-A">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 color-A">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 color-A">About</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-2 mb-3">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 color-A">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 color-A">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 color-A">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 color-A">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 color-A">About</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-5 offset-md-1 mb-3">
+        <form>
+          <h5 class="mb-1">Iscriviti alla nostra newsletter</h5>
+          <p class="mb-3">Resta sempre aggiornato sulle ultime inserzioni.</p>
+          <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+            <label for="newsletter1" class="visually-hidden">Indirizzo Email</label>
+            <input id="newsletter1" type="text" class="form-control" placeholder="Indirizzo Email">
+            <button class="btn fucsia" type="button">Iscriviti</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-12 d-flex justify-content-between">
+            <span class="color-A" style="text-decoration: none;"><i class="fa-solid fa-dragon fa-xl me-3" style="color: #fb00b8;"></i>© 2022 Company, Inc. All rights reserved.</span>
+          <ul class="list-unstyled d-flex me-5">
+            <li class="ms-3"><a class="color-A" href="#"><i class="bi bi-facebook"></i></a></li>
+            <li class="ms-3"><a class="color-A" href="#"><i class="bi bi-twitter"></i></a></li>
+            <li class="ms-3"><a class="color-A" href="#"><i class="bi bi-instagram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+<!-- FINE FOOTER -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Swiper JS  -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<!-- AoS JS  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+<!-- JS BootStrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha383-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<!-- JS Mio -->
+    <script src="./main.js"></script>
+</body>
+</html>

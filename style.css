@@ -126,6 +126,15 @@
     border: 2px solid var(--color-A);
     padding: 5px;
 }
+.img-category:hover{
+    box-shadow: 0 0 .2rem var(--color-A),
+    0 0 .2rem var(--color-A),
+    0 0 2rem var(--color-A),
+    0 0 0.8rem var(--color-A),
+    0 0 2.8rem var(--color-A),
+    inset 0 0 1.3rem var(--color-A); 
+    transition: 0.3s;
+}
 
 /* COUNTER */
 .boxNumbers{
